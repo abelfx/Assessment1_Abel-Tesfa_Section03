@@ -20,6 +20,7 @@ header {
 }
 header h1 {
   text-align: center;
+  font-size: 2.5em;
 }
 
 /* Navigation bar */
@@ -41,6 +42,7 @@ nav ul li a {
   padding: 15px 10px;
   border-radius: 5px;
   color: rgb(3, 180, 3);
+  font-size: 1.2em;
 }
 
 nav ul li a:hover {
@@ -48,7 +50,6 @@ nav ul li a:hover {
 }
 
 /* Main */
-
 main {
   max-width: 1200px;
   margin: 0px auto;
@@ -60,7 +61,7 @@ main {
 main h2 {
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 main .product-list {
@@ -70,17 +71,20 @@ main .product-list {
   gap: 70px;
 }
 
+/* Product */
 main .product-list .product {
   flex: 1 1 calc(33.33% - 20px);
   border: none;
   border-radius: 5px;
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
   max-width: 300px;
   min-height: 500px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+main .product-list .product:hover {
+  transform: scale(1.01);
 }
 
 main .product-list .product img {
@@ -108,9 +112,105 @@ main .product-list .product .price {
   padding-bottom: 50px;
 }
 
+/* Footer */
 footer {
   background-color: rgb(0, 100, 0);
   color: white;
   text-align: center;
   padding: 25px;
+}
+
+/* responsiveness */
+
+/* For Tablets */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    padding: 30px;
+    padding-bottom: 100px;
+  }
+
+  main h2 {
+    font-size: 1.5em;
+  }
+
+  main .product-list {
+    gap: 40px;
+  }
+
+  main .product-list .product {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 100%;
+    min-height: 450px;
+  }
+
+  main .product-list .product img {
+    width: 90%;
+  }
+
+  main .product-list .product .price {
+    font-size: 1.1em;
+    padding-bottom: 30px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+  }
+
+  main {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+
+  main h2 {
+    font-size: 1.3em;
+  }
+
+  main .product-list {
+    gap: 20px;
+  }
+
+  main .product-list .product {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+    min-height: 400px;
+  }
+
+  main .product-list .product img {
+    width: 100%;
+  }
+
+  main .product-list .product .price {
+    font-size: 1em;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    padding: 15px;
+  }
 }
